@@ -2,6 +2,7 @@
 title: Matthew Blick | Portfolio
 email: mblick@live.co.uk
 description: A collection of my creative works.
+baseurl: '/portfolio'
 url: "http://matthewblick.com" # the base hostname & protocol for your site
 
 # Build settings
