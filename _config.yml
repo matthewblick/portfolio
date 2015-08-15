@@ -1,0 +1,9 @@
+# Site settings
+title: Matthew Blick | Portfolio
+email: mblick@live.co.uk
+description: A collection of my creative works.
+url: "http://matthewblick.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+permalink: /:title
