@@ -1,3 +1,321 @@
 ---
 ---
-@import '_stylesheet.scss';
+
+@charset "UTF-8";
+/* CSS Document */
+
+/* Standard body text styles */
+body,td,th {
+	font-size: 25px;
+	color: #000;
+	widows: 2;
+}
+
+/* Body background colour */
+body {
+	background-color: #fff;
+}
+
+/* Link styles */
+.underline {
+	border-bottom: 3px solid #000;
+	padding-bottom: 2px;
+}
+.underlinethin {
+	border-bottom: 2px solid #000;
+	padding-bottom: 2px;
+}
+.underlinethick {
+	border-bottom: 5px solid #000;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a {
+  color:#000;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+a.offwhite {color: #000;}
+a.offwhite:link {text-decoration: none; color: #000;}
+a.offwhite:visited {text-decoration: none; color: #000;}
+a.offwhite:hover {text-decoration: none; color: #fff;}
+a.offwhite:active {text-decoration: none; color: #000;
+}
+a.offwhitemenubreak {color: #000;}
+a.offwhitemenubreak:link {text-decoration: none; color: #000;}
+a.offwhitemenubreak:visited {text-decoration: none; color: #000;}
+a.offwhitemenubreak:hover {text-decoration: none; color: fff;}
+a.offwhitemenubreak:active {text-decoration: none; color: #000;
+}
+
+/* Container styles */
+#container {
+	margin: 0 auto;
+	width: 100%;
+    height: auto;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+}
+
+/* Welcome messages on all pages */
+#welcome,
+#pagetitle {
+    top: 50%;
+	font-size: 30px;
+	text-align: center;
+	display: none;
+	font-family: 'Nexa Bold', Helvetica, Arial, sans-serif;
+	width: 90%;
+	widows: 2;
+}
+#simplicityisntsimple {
+    top: 50%;
+	font-size: 30px;
+	text-align: center;
+	display: none;
+	font-family: 'Nexa Bold', Helvetica, Arial, sans-serif;
+	width: 100%
+}
+#downarrow,
+#pagetitledownarrow {
+	display: none;
+}
+
+/* Links/info at the bottom of the page  */
+#info {
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 25%;
+	line-height: 40px;
+	width: 100%;
+	color: #fff;
+	font-family: 'Nexa Bold', Helvetica, Arial, sans-serif;
+    max-width: 1224px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#bottominfo {
+	margin-top: 200px;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	font-size: 20px;
+}
+
+/* Content centering to screen */
+#welcome,
+#simplicityisntsimple,
+#downarrow,
+#pagetitle,
+#pagetitledownarrow {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+/* Menu styles */
+#menu {
+	position:fixed;
+	top:0px;
+	width:100%; 
+	height: 50px;
+	background-color: #ffe085;
+	color: #000;
+	z-index:9999;
+	display: none;
+	text-align: center;
+	font-family: 'Nexa Bold', Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 60px;
+}
+
+/* Main content of all pages */
+#maincontent {
+	padding-top: 120%;
+	width: 85%;
+	margin-left: auto;
+    margin-right: auto;
+    max-width: 1224px;
+}
+img {
+	width: 100%;
+}
+
+/*  Grid sections  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  Grid column setup  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { 
+	margin-left: 0;
+}
+
+/*  Grid group  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  Grid column setup (Starting content from the right)  */
+.colright {
+	display: block;
+	float:right;
+	margin: 1% 1.6% 1% 0%;
+}
+.colright:first-child { 
+	margin-right: 0; 
+}
+
+/*  Grid of 9  */
+.span_9_of_9 { width: 100%; max-width: 1224px; }
+.span_8_of_9 { width: 88.71%; max-width: 1086px; }
+.span_7_of_9 { width: 77.42%; max-width: 948px; }
+.span_6_of_9 { width: 66.13%; max-width: 809px; }
+.span_5_of_9 { width: 54.84%; max-width: 671px; }
+.span_4_of_9 { width: 43.55%; max-width: 533px; }
+.span_3_of_9 { width: 32.26%; max-width: 395px; }
+.span_2_of_9 { width: 20.97%; max-width: 257px; }
+.span_1_of_9 { width: 9.688%; max-width: 119px; }
+
+/*  Grid of 9 goes full width at 600px wide and below */
+@media only screen and (max-width: 600px) {
+	h3 { font-size: 15px }
+	.col {  margin: 1% 0 1% 0%; }
+	.colright {  margin: 1% 0 1% 0%; }
+	.span_1_of_9, .span_2_of_9, .span_3_of_9, .span_4_of_9, .span_5_of_9, .span_6_of_9, .span_7_of_9, .span_8_of_9, .span_9_of_9 { width: 100%; display: block; }
+}
+
+/*  Grid of 4 (used on Clients Page) */
+.span_4_of_4 {
+	width: 100%;
+}
+.span_3_of_4 {
+	width: 74.6%;
+}
+.span_2_of_4 {
+	width: 49.2%;
+}
+.span_1_of_4 {
+	width: 23.8%;
+}
+
+/*  Grid of 4 goes full width at 600px wide and below (used on Clients page) */
+@media only screen and (max-width: 600px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
+
+/* Project covers (used for selected works) */
+.grid-block {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+.coverhover1 {
+	background: #f4f4f4;
+	opacity: 0.9;
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.caption1 {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-family: 'Nexa Bold', Helvetica, Arial, sans-serif;
+}
+.caption1 h3, .caption1 p {
+	color: #000;
+	margin: 50px;
+	text-align: center;
+	line-height: 30px;
+}
+.caption1 h3 {
+	margin: 50px 20px 10px;
+	color: #000;
+	text-align: center;
+}
+.caption1 p {
+	font-size: .75em;
+	line-height: 1.5em;
+	margin: 0 20px 15px;
+	color: #000;
+}
+
+/*  Decrese cover title text size at 900px and below */
+@media only screen and (max-width: 900px) {
+	h3 { font-size: 20px }
+}
+
+/* Body copy text styles */
+.annotations {
+	font-family: Georgia, Times, "Times New Roman", serif;
+	line-height: 40px;
+}
+
+/* Heading/large text styles */
+.heading {
+	font-family: 'Nexa Bold', Helvetica, Arial, "sans-serif;";
+	font-size: 55px;
+	line-height: 65px;
+}
+
+/* cursor selection styles */
+::selection {
+    background: #ffe085;
+}
+::-moz-selection {
+    background: #ffe085;
+}
+
+/* Right arrow custom bullets */
+ul#backgroundimage li {
+	list-style-type: none;
+	background-image: url(../images/rightarrow.png);
+	background-position: center left;
+	background-repeat: no-repeat;
+	padding: 0 0 0 3em;
+}
+
+/* Keeps media player proportions correct */
+.mediaplayer {
+    position: relative;
+    padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+.mediaplayer iframe {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
